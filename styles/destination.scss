@@ -1,0 +1,94 @@
+.wrapper {
+	max-width: 1110px;
+	width: 100%;
+	margin: 0 auto;
+}
+.destination {
+	margin-top: 110px;
+	.mainText {
+		color: #fff;
+		font-size: 28px;
+		font-family: 'Barlow';
+		span {
+			color: #4f5158;
+		}
+	}
+	.content {
+		display: flex;
+		justify-content: space-between;
+		.imgWrapper {
+			margin-top: 95px;
+			margin-left: 65px;
+		}
+		.planet {
+			max-width: 444px;
+			& > .title {
+				font-family: 'Bellefair';
+				font-size: 100px;
+				color: #fff;
+				margin-top: 37px;
+				margin-bottom: 16px;
+			}
+			& > .text {
+				font-family: 'Barlow';
+				font-size: 18px;
+				color: #d0d6f9;
+				margin-bottom: 55px;
+			}
+			hr {
+				border-color: #383b4b;
+			}
+			.distance {
+				margin-top: 28px;
+				display: inline-block;
+				margin-right: 79px;
+				.title {
+					font-size: 14px;
+					color: #d0d6f9;
+				}
+				.text {
+					font-size: 28px;
+					color: #fff;
+				}
+			}
+			.travel {
+				margin-top: 28px;
+				display: inline-block;
+				.title {
+					font-size: 14px;
+					color: #d0d6f9;
+				}
+				.text {
+					font-size: 28px;
+					color: #fff;
+				}
+			}
+		}
+		.tabMenu {
+			display: flex;
+			gap: 1.5rem;
+			button {
+				font-family: 'Barlow';
+				background: none;
+				border: none;
+				color: #d0d6f9;
+				position: relative;
+				cursor: pointer;
+				&.active {
+					color: #fff;
+					&::after {
+						content: '';
+						position: absolute;
+						top: 100%;
+						left: 50%;
+						transform: translateX(-50%);
+						width: 80%;
+						height: 3px;
+						margin-top: 12px;
+						background-color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
