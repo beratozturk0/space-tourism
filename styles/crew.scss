@@ -1,0 +1,30 @@
+.mainText {
+	margin-top: 75px;
+}
+.flex {
+	.title {
+		color: #8f9195;
+		font-size: 32px;
+		font-family: 'Bellefair';
+		margin-bottom: 15px;
+		margin-top: 150px;
+	}
+	.name {
+		text-transform: uppercase;
+		font-family: 'Bellefair';
+		font-size: 56px;
+		color: #fff;
+		margin-bottom: 16px;
+	}
+	.text {
+		font-family: 'Barlow';
+		font-size: 18px;
+		color: #d0d6f9;
+		width: 444px;
+	}
+}
+.crewImg {
+	position: absolute;
+	bottom: 0;
+	right: 130px;
+}

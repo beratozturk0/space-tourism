@@ -1,5 +1,6 @@
 import './styles/style.scss'
 import './styles/destination.scss'
+import './styles/crew.scss'
 const qs = (selector, parent = document) => {
   return parent.querySelector(selector)
 }
@@ -38,7 +39,6 @@ const planets = [{
 ]
 
 const buttons = qsa(".tabMenu button")
-console.log(buttons)
 buttons.forEach((b) => {
   b.onclick = (e) => {
     console.log(e.target.dataset.planet)
@@ -57,3 +57,53 @@ buttons.forEach((b) => {
     })
   }
 })
+
+
+const crew = [{
+    id: 1,
+    img: "/assets/crew/image-douglas-hurley.png",
+    title: "COMMANDER",
+    name: "DOUGLAS HURLEY",
+    text: "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.",
+  },
+  {
+    id: 2,
+    img: "/assets/crew/image-mark-shuttleworth.png",
+    title: "MİSSİON SPECİALİST",
+    name: "MARK SHUTTLEWORTH ",
+    text: "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.",
+  },
+  {
+    id: 3,
+    img: "/assets/crew/image-victor-glover.png",
+    title: "PILOT",
+    name: "VICTOR GLOVER",
+    text: "Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer. ",
+  },
+  {
+    id: 4,
+    img: "/assets/crew/image-anousheh-ansari.png",
+    title: "FLIGHT ENGINEER",
+    name: "ANOUSHEH ANSARI",
+    text: "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space. ",
+  },
+]
+const dots = qsa(".dots .dot")
+dots.forEach((d) => {
+  d.onclick = (e) => {
+    dots.forEach(d => d.classList.remove("active"))
+    e.target.classList.add("active")
+    crew.forEach((c) => {
+      if (c.id == e.target.dataset.id) {
+        qs(".crew .title").textContent = c.title
+        qs(".crew .name").textContent = c.name
+        qs(".crew .text").textContent = c.text
+        qs(".crewImg img").src = c.img
+
+      }
+    })
+
+  }
+
+})
+console.log(crew[0])

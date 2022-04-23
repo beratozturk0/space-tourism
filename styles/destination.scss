@@ -3,16 +3,16 @@
 	width: 100%;
 	margin: 0 auto;
 }
+.mainText {
+	color: #fff;
+	font-size: 28px;
+	font-family: 'Barlow';
+	span {
+		color: #4f5158;
+	}
+}
 .destination {
 	margin-top: 110px;
-	.mainText {
-		color: #fff;
-		font-size: 28px;
-		font-family: 'Barlow';
-		span {
-			color: #4f5158;
-		}
-	}
 	.content {
 		display: flex;
 		justify-content: space-between;
