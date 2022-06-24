@@ -124,13 +124,23 @@ const technology = [{
     text: "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.",
   },
 ]
-qs(".technology .circles").onclick = (e) => {
-  if (e.target.className === "circle") {
-    // console.log(e.target.textContent - 1)
-    const index = e.target.textContent - 1
-    // console.log(technology[index].title)
-    qs(".title").textContent = technology[index].title
-    qs(".text").textContent = technology[index].text
-    qs(".imgWrapper img").src = technology[index].img
+const circles = qs(".technology .circles")
+if (circles) {
+  circles.onclick = (e) => {
+    if (e.target.className === "circle") {
+      // console.log(e.target.textContent - 1)
+      const index = e.target.textContent - 1
+      // console.log(technology[index].title)
+      qs(".title").textContent = technology[index].title
+      qs(".text").textContent = technology[index].text
+      qs(".imgWrapper img").src = technology[index].img
+      qsa(".circle").forEach(c => c.classList.remove("active"))
+      e.target.classList.add("active")
+    }
   }
+}
+
+qs(".menuButton").onclick = () => {
+  qs(".mobilMenu").classList.toggle("active")
+  qs(".menuButton").classList.toggle("active")
 }
