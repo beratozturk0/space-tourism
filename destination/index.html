@@ -11,46 +11,57 @@
 <body>
   <img src="/assets/destination/background-destination-desktop.jpg" alt="" class="background">
   <header>
-    <img src="/img/Logo.svg" alt="" class="logo">
+    <div class="logo">
+      <img src="/img/Logo.svg" alt="">
+    </div>
     <div class="menuWrapper">
       <div class="line"></div>
-      <a href="/" class="link"><span>00</span> HOME</a>
-      <a href="/destination/" class="link active"><span>01</span> DESTNATION</a>
+      <a href="/" class="link "><span>00</span> HOME</a>
+      <a href="/destination/" class="link active"><span>01</span> DESTINATION</a>
       <a href="/crew/" class="link"><span>02</span> CREW</a>
       <a href="/technology/" class="link"><span>03</span> TECHNOLOGY</a>
     </div>
+    <div class="menuButton">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
+  <div class="mobilMenu">
+    <a href="/" class="link active"><span>00</span> HOME</a>
+    <a href="/destination/" class="link"><span>01</span> DESTNATION</a>
+    <a href="/crew/" class="link"><span>02</span> CREW</a>
+    <a href="/technology/" class="link"><span>03</span> TECHNOLOGY</a>
+  </div>
   <main>
-    <div class="wrapper">
-      <div class="destination">
+    <div class="wrapper destination">
+      <div style="width:100%;">
         <div class="mainText"><span>01</span> &nbsp; PICK YOUR DESTINATION</div>
-        <div class="content">
-          <div class="imgWrapper">
-            <img src="/assets/destination/image-moon.png" alt="">
+        <div class="imgWrapper">
+          <img src="/assets/destination/image-moon.png" alt="" class="planetImg">
+        </div>
+      </div>
+      <div class="planet">
+        <nav class="tabMenu">
+          <button data-planet="MOON" class="active">MOON</button>
+          <button data-planet="MARS">MARS</button>
+          <button data-planet="EUROPA">EUROPA</button>
+          <button data-planet="TITAN">TITAN</button>
+        </nav>
+        <div class="title">MOON</div>
+        <div class="text">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</div>
+        <hr>
+        <div class="infoWrapper">
+          <div class="distance">
+            <div class="title">AVG. DISTANCE</div>
+            <div class="text">384,400 KM</div>
           </div>
-          <div class="planet">
-            <nav class="tabMenu">
-              <button data-planet="MOON" class="active">MOON</button>
-              <button data-planet="MARS">MARS</button>
-              <button data-planet="EUROPA">EUROPA</button>
-              <button data-planet="TITAN">TITAN</button>
-            </nav>
-            <div class="title">MOON</div>
-            <div class="text">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</div>
-            <hr>
-            <div class="distance">
-              <div class="title">AVG. DISTANCE</div>
-              <div class="text">384,400 KM</div>
-            </div>
-            <div class="travel">
-              <div class="title">EST. TRAVEL TIME</div>
-              <div class="text">3 DAYS</div>
-            </div>
+          <div class="travel">
+            <div class="title">EST. TRAVEL TIME</div>
+            <div class="text">3 DAYS</div>
           </div>
         </div>
-
       </div>
-
     </div>
   </main>
 
