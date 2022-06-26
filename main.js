@@ -107,18 +107,21 @@ dots.forEach((d) => {
 })
 const technology = [{
     id: 1,
+    imgMobile: "/assets/technology/image-launch-vehicle-landscape.jpg",
     img: "/assets/technology/image-launch-vehicle-portrait.jpg",
     title: "LAUNCH VEHICLE",
     text: "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!",
   },
   {
     id: 2,
+    imgMobile: "/assets/technology/image-spaceport-landscape.jpg",
     img: "/assets/technology/image-spaceport-portrait.jpg",
     title: "SPACEPORT",
     text: "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.",
   },
   {
     id: 3,
+    imgMobile: "/assets/technology/image-space-capsule-landscape.jpg",
     img: "/assets/technology/image-space-capsule-portrait.jpg",
     title: "SPACE CAPSULE",
     text: "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.",
@@ -126,6 +129,9 @@ const technology = [{
 ]
 const circles = qs(".technology .circles")
 if (circles) {
+  if (window.innerWidth < 1190) {
+    qs(".imgWrapper img").src = technology[0].imgMobile
+  }
   circles.onclick = (e) => {
     if (e.target.className === "circle") {
       // console.log(e.target.textContent - 1)
@@ -133,7 +139,11 @@ if (circles) {
       // console.log(technology[index].title)
       qs(".title").textContent = technology[index].title
       qs(".text").textContent = technology[index].text
-      qs(".imgWrapper img").src = technology[index].img
+      if (window.innerWidth < 1190) {
+        qs(".imgWrapper img").src = technology[index].imgMobile
+      } else {
+        qs(".imgWrapper img").src = technology[index].img
+      }
       qsa(".circle").forEach(c => c.classList.remove("active"))
       e.target.classList.add("active")
     }
