@@ -2,6 +2,7 @@ import './styles/style.scss'
 import './styles/destination.scss'
 import './styles/crew.scss'
 import './styles/technology.scss'
+
 const qs = (selector, parent = document) => {
   return parent.querySelector(selector)
 }
@@ -52,8 +53,6 @@ buttons.forEach((b) => {
         qs(".planet .travel .text").textContent = p.travel
         qs(".imgWrapper img").src = p.img
       }
-
-
     })
   }
 })
@@ -97,12 +96,9 @@ dots.forEach((d) => {
         qs(".crew .name").textContent = c.name
         qs(".crew .text").textContent = c.text
         qs(".crewImg img").src = c.img
-
       }
     })
-
   }
-
 })
 const technology = [{
     id: 1,
@@ -126,6 +122,7 @@ const technology = [{
     text: "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.",
   },
 ]
+
 const circles = qs(".technology .circles")
 if (circles) {
   if (window.innerWidth < 1190) {
