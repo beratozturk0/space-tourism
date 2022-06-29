@@ -42,7 +42,6 @@ const planets = [{
 const buttons = qsa(".tabMenu button")
 buttons.forEach((b) => {
   b.onclick = (e) => {
-    console.log(e.target.dataset.planet)
     buttons.forEach((b) => b.classList.remove("active"))
     e.target.classList.add("active")
     planets.forEach((p) => {
@@ -134,9 +133,7 @@ if (circles) {
   }
   circles.onclick = (e) => {
     if (e.target.className === "circle") {
-      // console.log(e.target.textContent - 1)
       const index = e.target.textContent - 1
-      // console.log(technology[index].title)
       qs(".title").textContent = technology[index].title
       qs(".text").textContent = technology[index].text
       if (window.innerWidth < 1190) {
